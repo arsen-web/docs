@@ -42,7 +42,7 @@
 Сохраняем файл и перезапускаем MySql: <br />
 `sudo service mysql restart`
 <br /><br />
-##### Шаг 2. Права на репликацию
+##### Шаг 2. Пользователь для репликации Master
 Для этого запускаем MySql в консоле Master: <br />
 `mysql -u root -p`
 
@@ -57,23 +57,26 @@
 
 Обновляем права доступа: <br />
 `FLUSH PRIVILEGES;`
+<br /><br />
+##### Шаг 3. Дамп базы
+Для этого запускаем MySql в консоле Master: <br />
+`mysql -u root -p`
 
 Блокируем все таблицы в нашей базе данных: <br />
 `USE <ИМЯ_БАЗЫ>` <br />
 `FLUSH TABLES WITH READ LOCK;`
+
+Выходим из `mysql` и необходимо сделать дамп базы данных: <br />
+`mysqldump -u <ИМЯ_ПОЛЬЗОВАТЕЛЯ> -p <ИМЯ_БАЗЫ> > data-dump.sql`
+
+Разблокируем таблицы в консоли mysql: <br />
+`UNLOCK TABLES;`
 
 Проверяем статус Master сервера: <br />
 `SHOW MASTER STATUS;`
 
 Мы увидим что-то похожее на: <br />
 ![mountains](./img/replication3.png)
-<br /><br />
-##### Шаг 3. Дамп базы
-Необходимо сделать дамп базы данных: <br />
-`mysqldump -u <ИМЯ_ПОЛЬЗОВАТЕЛЯ> -p <ИМЯ_БАЗЫ> > data-dump.sql`
-
-Разблокируем таблицы в консоли mysql: <br />
-`UNLOCK TABLES;`
 <br /><br />
 ##### Шаг 4. Создание базы на Slave
 Для этого запускаем MySql в консоле Slave: <br />
