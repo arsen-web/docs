@@ -162,6 +162,7 @@
          MASTER_LOG_FILE = '<MASTER_LOG_FILE_MASTER_1>', 
          MASTER_LOG_POS = <MASTER_LOG_POS_MASTER_1>;` 
  <br />
+ 
  Проверяем статус Master 2 сервера: <br />
  `SHOW MASTER STATUS;`
  
