@@ -1,13 +1,10 @@
-### **Как настроить MySQL Master-Master репликацию?**
+### **Как настроить Master-Master репликацию?**
 ##### Шаг 1. Настройка Master 1
 Сервер (IP - 10.10.0.1) который будет выступать как Master 1, необходимо внести правки в my.cnf:
 
 Путь до файла my.cnf
 * Для ubuntu /etc/mysql/mysql.conf.d/mysqld.cnf
 * Для MacOS /usr/local/etc/my.cnf
-
-Записываем свой IP адрес (ОБЯЗАТЕЛЬНО): <br />
-`bind-address = 10.10.0.1`
 
 Выбираем ID сервера (произвольное число, лучше начинать с 1): <br /> 
 `server-id = 1`
@@ -40,6 +37,9 @@
 
 Хранение временный файлов: <br />
 `tmpdir = /tmp`
+
+Записываем свой IP адрес (ОБЯЗАТЕЛЬНО): <br />
+`bind-address = <IP>`
 
 Сохраняем файл и перезапускаем MySql: <br />
 `sudo service mysql restart`
