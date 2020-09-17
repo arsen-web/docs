@@ -79,7 +79,7 @@
 `SHOW MASTER STATUS;`
 
 Мы увидим что-то похожее на: <br />
-![mountains](./img/replication3.png)
+![mountains](img/replication3.png)
 <br /><br />
 ##### Шаг 4. Настройка Master 2
 Сервер (IP - 10.10.0.2) который будет выступать как Master 2, необходимо внести правки в my.cnf:
@@ -167,7 +167,7 @@
  `SHOW MASTER STATUS;`
  
  Мы увидим что-то похожее на: <br />
- ![mountains](./img/replication3.png)
+ ![mountains](img/replication3.png)
  <br /><br />
   ##### Шаг 8. Включение репликации на Master 1
   В консоли mysql на Master 1 необходимо выполнить запрос: <br />

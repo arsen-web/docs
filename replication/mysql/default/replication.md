@@ -4,12 +4,12 @@
 Для (приложения, сайта) появляется возможность использовать не один сервер для обработки всех запросов, а несколько.
 Таким образом появляется возможность распределить нагрузку с одного сервера на несколько.
 
-![mountains](./img/replication1.png)
+![mountains](img/replication1.png)
 ***
 
 ### **Существует два основных подхода при работе с репликацией данных:**
-* Репликация Master-Slave;
-* Репликация Master-Master.
+* [Репликация Master-Slave](https://github.com/arsen-web/docs/blob/master/replication/mysql/master-slave.md "Репликация Master-Slave")
+* [Репликация Master-Master](https://github.com/arsen-web/docs/blob/master/replication/mysql/master-master.md "Репликация Master-Master")
 ***
 
 ### **Master-Slave репликация** <br />
@@ -19,7 +19,7 @@ Slave сервер постоянно копирует все изменения
 С (приложения, сайта) на Slave сервер отправляются запросы чтения данных (запросы SELECT). 
 Таким образом Мастер сервер отвечает за изменения данных, а Slave за чтение.
 
-![mountains](./img/replication2.png)
+![mountains](img/replication2.png)
 <br /><br />
 #### Несколько Слейвов
 Преимущество этого типа репликации в том, что Вы можете использовать более одного Слейва. 
@@ -49,7 +49,7 @@ Slave сервер постоянно копирует все изменения
 Master-Master репликация в MySQL используется распределения нагрузки на базу данных между несколькими серверами.
 Хотя Master-Slave репликация намного популярнее и проще, Master-Master репликация может быть полезной.
 
-![mountains](./img/replication5.png)
+![mountains](img/replication5.png)
 <br /><br />
 #### Выход из строя
 Вероятные поломки делают Master-Master репликацию непривлекательной.

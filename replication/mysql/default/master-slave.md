@@ -76,7 +76,7 @@
 `SHOW MASTER STATUS;`
 
 Мы увидим что-то похожее на: <br />
-![mountains](./img/replication3.png)
+![mountains](img/replication3.png)
 <br /><br />
 ##### Шаг 4. Создание базы на Slave
 Для этого запускаем MySql в консоле Slave: <br />
@@ -120,7 +120,7 @@
         MASTER_LOG_POS = <>;` 
 <br />
 **MASTER_LOG_FILE** и **MASTER_LOG_POS** берем из Master командой `SHOW MASTER STATUS;` <br />
-![mountains](./img/replication3.png)
+![mountains](img/replication3.png)
 
 После этого запускаем репликацию на Slave: <br />
 `START SLAVE;`
@@ -128,5 +128,5 @@
 Проверить работу репликации на Slave можно запросом: <br />
 `SHOW SLAVE STATUS\G`
 
-![mountains](./img/replication4.png)
+![mountains](img/replication4.png)
 ***
