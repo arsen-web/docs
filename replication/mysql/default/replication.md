@@ -8,8 +8,8 @@
 ***
 
 ### **Существует два основных подхода при работе с репликацией данных:**
-* [Репликация Master-Slave](https://github.com/arsen-web/docs/blob/master/replication/mysql/master-slave.md "Репликация Master-Slave")
-* [Репликация Master-Master](https://github.com/arsen-web/docs/blob/master/replication/mysql/master-master.md "Репликация Master-Master")
+* [Репликация Master-Slave](https://github.com/arsen-web/docs/blob/master/replication/mysql/default/master-slave.md "Репликация Master-Slave")
+* [Репликация Master-Master](https://github.com/arsen-web/docs/blob/master/replication/mysql/default/master-master.md "Репликация Master-Master")
 ***
 
 ### **Master-Slave репликация** <br />
